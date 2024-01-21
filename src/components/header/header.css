@@ -96,7 +96,12 @@
 }
 /* For small devices */
 @media screen and (max-width: 350px) {
+      .container{
+            margin-left: 10px;
+            margin-right: 10px;
+      }
       .nav_menu{
+            
             padding: 2rem 0.25rem 4rem;
       }
 }
