@@ -117,7 +117,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="services_content">
           <div>
             <i className="uil uil-edit services_icon"></i>
@@ -125,7 +125,7 @@ const Services = () => {
               Visual <br /> Designer
             </h3>
           </div>
-          <span className="services_button" onClick={()=>toggleTab(1)}>
+          <span className="services_button" onClick={()=>toggleTab(3)}>
             View More
             <i className="uil uil-arrow-right services_button-icon"></i>
           </span>
