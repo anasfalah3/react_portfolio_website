@@ -39,7 +39,12 @@
 /* Active link */
 .active-link,
 .nav_link:hover{
-      color: var(--title-color-dark);
+      color: var(--text-color);
+}
+/* Change Background Header */
+.scroll-header{
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
 }
 /* ==== BREAKPOINTS ==== */
 @media screen and (max-width: 768px) {
