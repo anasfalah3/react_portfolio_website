@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
-const Header = () => {
+const Header = ({setIsDarkMode}) => {
   /* ==== Toggle Menu ==== */
   const [Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
@@ -17,7 +17,7 @@ const Header = () => {
           <a href="index.html" className="nav_logo">
             Smith
           </a>
-
+          <input onClick={() => setIsDarkMode(prevMode => !prevMode)} type="checkbox" class="theme-checkbox"></input>
           <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
             <ul className="nav_list grid">
               <li className="nav_item">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import Header from "./components/header/Header";
@@ -12,6 +13,12 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  useEffect(() => {
+    // You can use a class on the body or another top-level element
+    document.body.classList.toggle("dark-mode", isDarkMode);
+  }, [isDarkMode]);
+
   return (
     <>
       <AnimatedCursor
@@ -22,7 +29,7 @@ function App() {
         innerScale={0.7}
         outerScale={5}
       />
-      <Header />
+      <Header setIsDarkMode={setIsDarkMode} />
       <main className="main">
         <Home />
         <About />
