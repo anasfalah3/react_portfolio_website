@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { projectsData, projectsNav } from "./Data";
+import { Fade } from "react-awesome-reveal";
+
 import WorkItems from "./WorkItems";
 const Works = () => {
   const [item, setItem] = useState({ name: "all" });
@@ -23,24 +25,30 @@ const Works = () => {
   };
   return (
     <div>
-      <div className="work_filters">
-        {projectsNav.map((item, index) => {
-          return (
-            <span
-              onClick={(e) => {
-                handleFilter(e, index);
-              }}
-              className={`${active === index ? "active-work" : ''} work_item`}
-              key={index}>
-              {item.name}
-            </span>
-          );
-        })}
-      </div>
+      <Fade direction="down" duration={2000}>
+        <div className="work_filters">
+          {projectsNav.map((item, index) => {
+            return (
+              <span
+                onClick={(e) => {
+                  handleFilter(e, index);
+                }}
+                className={`${active === index ? "active-work" : ""} work_item`}
+                key={index}>
+                {item.name}
+              </span>
+            );
+          })}
+        </div>
+      </Fade>
 
       <div className="work_container container grid">
         {projects.map((item) => {
-          return <WorkItems item={item} key={item.id} />;
+          return (
+            <Fade>
+              <WorkItems item={item} key={item.id} />
+            </Fade>
+          );
         })}
       </div>
     </div>

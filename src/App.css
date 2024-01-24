@@ -53,6 +53,15 @@
   }
 }
 /* ==== BASE ==== */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  width: 0.2px;
+  background: var(--title-color);
+  border-radius: 10px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +69,10 @@
 }
 html {
   scroll-behavior: smooth;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body,
 button,
@@ -155,7 +168,7 @@ img {
 }
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  body{
+  body {
     margin: 0 10px var(--header-height) 10px;
   }
   .section {

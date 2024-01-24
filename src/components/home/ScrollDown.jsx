@@ -1,7 +1,8 @@
 import React from "react";
-
+import { Fade } from "react-awesome-reveal";
 const ScrollDown = () => {
   return (
+      <Fade direction="up" delay={800}>
     <div className="home_scroll">
       <a href="#about" className="home_scroll-button button--flex">
         <svg
@@ -40,6 +41,7 @@ const ScrollDown = () => {
         <i className="uil uil-arrow-down home_scroll-arrow"></i>
       </a>
     </div>
+      </Fade>
   );
 };
 
