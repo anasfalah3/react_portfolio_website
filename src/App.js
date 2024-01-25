@@ -28,6 +28,7 @@ function App() {
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}
+        showSystemCursor={true}
       />
       <Header setIsDarkMode={setIsDarkMode} />
       <main className="main">
